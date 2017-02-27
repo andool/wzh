@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			a{
+				text-decoration: none;
+				color: #1171A3;
+			}
+			ul{
+				list-style: none;
+			}
+			ul li{
+				display: inline-block;
+				color: #1171A3;
+				margin: 20px;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<!--<div ui-view></div>
+		<hr />
+		<div ui-view="main1"></div>
+		<hr />
+		<div ui-view="main"></div>
+		<hr />
+		<div ui-view="qiantao"></div>
+		<hr />-->
+		<div ui-view="index1"></div>
+		<hr />
+		<div ui-view="foot"></div>
+		
+		<!--<ul>
+			<li ui-sref="home">home_单视图</li>
+			<li ui-sref="photos({name:'jeck'})">photos_单视图传参</li>
+			<li ui-sref="main">main_多视图</li>
+			<li ui-sref="qiantao">qiantao_父视图</li>
+			<li ui-sref="qiantao.ziqiantao">ziqiantao_子视图</li>
+			<li ui-sref="qiantao.ziqiantao1({name:name})"  ng-init='name="王五和李四"'>ziqiantao_子视图1</li>
+		</ul>-->
+		<ul>
+			<li ui-sref="index">index</li>
+			<li ui-sref="index.content1">index.content1</li>
+			<li ui-sref="index.content2">index.content2</li>
+			<li ui-sref="footer">footer</li>
+		</ul>
+		
+		
+		<script src="js/angular-1.5.8/angular.js"></script>
+		<script src="js/angula_ui/angular-ui-router.js"></script>
+		<script src="js/my_js/uiRouter_1/app.js"></script>
+	</body>
+</html>

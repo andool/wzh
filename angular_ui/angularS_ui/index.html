@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<div ng-controller="myCtrl">
+			<h1><span ng--bind="p.hello"></span></h1>
+		</div>
+		<div ui-view></div>
+		
+		<a href="#start">to start</a><br />
+		<a href="#rout1/jeck/19">to rout1</a><br />
+		<a href="#/ibox/11">to ibox</a><br />
+		<hr />
+		<a href="#/boxesMain">to boxesMain</a>
+		<script src="js/angular-1.5.8/angular.js"></script>
+		<script src="js/angula_ui/angular-ui-router.js"></script>
+		<script src="js/my_js/uiRouter/app.js"></script>
+		<script src="js/my_js/uiRouter/controllers.js"></script>
+	</body>
+</html>
