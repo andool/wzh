@@ -9,17 +9,53 @@
 			    width: 400px; 
 			    height: 300px
 			}
+			.page-list{
+				
+			}
+			.pagination{
+				list-style: none;
+				float: left;
+			}
+			.pagination li{
+				display: inline-block;
+				width: 28px;
+				height: 28px;
+				border-top: 1px solid #000000;
+				border-bottom: 1px solid #000000;
+				border-left: 1px solid #000000;
+				color: #000000;
+				text-align: center;
+				line-height: 28px;
+				cursor: pointer;
+				
+			}
+			.pagination li:last-child{
+				border-right: 1px solid #000000;
+			}
+			li.active{
+				background: #000000;
+				color: #FFFFFF;	
+			}
+			.minInput{
+				width: 50px;
+			}
+			.page-total{
+				float: left;
+			}
 		</style>
 	</head>
 	<body>
 		
 		<div ng-controller="gridCrtl">
-			<div class="gridStyle" ng-grid="gridOptions"></div>
-		</div>
+			<input type="text" name="name" id="name" ng-model="query.name" />
+			<input type="text" name="age" id="age" ng-model='query.age' />
+			<select ng-model="query.gender" ng-options="option for option in genders"></select>
+			<pager conf="pageNationConf"></pager>
+		</div>		
 		
 		
 		<script src="js/angular-1.5.8/angular.js"></script>
-		<script src="js/angula_ui/ui-grid.min.js"></script>
+		<script src="js/my_js/myDirective/directives.js"></script>
 		<script src="js/my_js/uiGrid/app.js"></script>
 	</body>
 </html>
