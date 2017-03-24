@@ -134,13 +134,13 @@ directive("wzDate", ["$document",function($document){
 	};
 	/*初始化参数*/
 	var buildParam = function(scope, param){
-		scope.isShowTime = param.isShowTime || true;
+		scope.isShowTime = param.isShowTime || false;
 		scope.pattern =  param.pattern || scope.isShowTime?"yyyy-MM-dd HH:mm:ss":"yyyy-MM-dd";
 //		scope.defaultDate = parse_(param.defalutVal, scope.pattern) || undefined; 	// 日期格式的值
 		scope.maxyear = param.maxyear || 2035;
 		scope.minyear = param.minyear || 1970;
 		scope.inputCls = param.inputCls || "input comm",
-		scope.timeUsePicker = param.timeUsePicker || true;
+		scope.timeUsePicker = param.timeUsePicker || false;
 		scope.mthOptions = [1,2,3,4,5,6,7,8,9,10,11,12];
 		scope.yearOptions = [];
 		for(var i = scope.minyear; i <= scope.maxyear; i++){
