@@ -13,18 +13,22 @@ var gridCrtl = app.controller("gridCrtl", ["$scope",
 		$scope.pageNationConf = {
 			currentPage:1,
 			totalItems:500,
-			pagesLength:21,
+			pagesLength:8,
 			rememberPerPage:'perPage',
-			itemsPerPage:15
+			itemsPerPage:9
 		};
-		
+		$scope.query = function(){
+			$scope.pageNationConf.totalItems = parseInt(Math.random()*1000);
+			listener();
+		};
 		var listener = function(){
-			console.info("====>>>>>>");
-			$scope.pageNationConf.totalItems = 300;
+			$scope.opts = [
+				{name:'aa',age:Math.random()*20},
+				{name:'bb',age:Math.random()*20},
+				{name:'cc',age:Math.random()*20}
+			];
 		}
 		
-		$scope.$watch('pageNationConf.itemsPerPage + pageNationConf.currentPage + query.name + query.age + query.gender',
-		listener);
+		$scope.$watch('pageNationConf.itemsPerPage + pageNationConf.currentPage',listener);
 	}
 ]);
-

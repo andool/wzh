@@ -3,45 +3,16 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="/angularS_ui/css/bootstrap.min.css"/>
 		<style type="text/css">
-			.gridStyle {
-			    border: 1px solid rgb(212,212,212);
-			    width: 400px; 
-			    height: 300px
-			}
-			.page-list{
-				
-			}
-			.pagination{
-				list-style: none;
-				float: left;
-			}
-			.pagination li{
-				display: inline-block;
-				width: 28px;
-				height: 28px;
-				border-top: 1px solid #000000;
-				border-bottom: 1px solid #000000;
-				border-left: 1px solid #000000;
-				color: #000000;
-				text-align: center;
-				line-height: 28px;
-				cursor: pointer;
-				
-			}
-			.pagination li:last-child{
-				border-right: 1px solid #000000;
-			}
-			li.active{
-				background: #000000;
-				color: #FFFFFF;	
-			}
-			.minInput{
-				width: 50px;
-			}
-			.page-total{
-				float: left;
-			}
+			.page-list .pagination {float:left;}
+	        .page-list .pagination span {cursor: pointer;}
+	        .page-list .pagination .separate span{cursor: default; border-top:none;border-bottom:none;}
+	        .page-list .pagination .separate span:hover {background: none;}
+	        .page-list .page-total {float:left; margin: 25px 20px;}
+	        .page-list .page-total input, .page-list .page-total select{height: 26px; border: 1px solid #ddd;}
+	        .page-list .page-total input {width: 40px; padding-left:3px;}
+	        .page-list .page-total select {width: 50px;}
 		</style>
 	</head>
 	<body>
@@ -50,6 +21,10 @@
 			<input type="text" name="name" id="name" ng-model="query.name" />
 			<input type="text" name="age" id="age" ng-model='query.age' />
 			<select ng-model="query.gender" ng-options="option for option in genders"></select>
+			<button ng-click="query();">query</button>
+			<ul ng-repeat="i in opts">
+				<li><span>{{i.name}}</span><span>{{i.age}}</span></li>
+			</ul>
 			<pager conf="pageNationConf"></pager>
 		</div>		
 		
