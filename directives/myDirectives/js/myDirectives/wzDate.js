@@ -140,7 +140,7 @@ directive("wzDate", ["$document",function($document){
 		scope.maxyear = param.maxyear || 2035;
 		scope.minyear = param.minyear || 1970;
 		scope.inputCls = param.inputCls || "input comm",
-//		scope.timeUsePicker = param.timeUsePicker || false;
+		scope.timeUsePicker = param.timeUsePicker || true;// TODO 暂时默认true
 		scope.mthOptions = [1,2,3,4,5,6,7,8,9,10,11,12];
 		scope.yearOptions = [];
 		for(var i = scope.minyear; i <= scope.maxyear; i++){
