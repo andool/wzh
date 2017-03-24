@@ -135,7 +135,7 @@ directive("wzDate", ["$document",function($document){
 	/*初始化参数*/
 	var buildParam = function(scope, param){
 		scope.isShowTime = param.isShowTime || false;
-		scope.pattern =  param.pattern || scope.isShowTime?"yyyy-MM-dd HH:mm:ss":"yyyy-MM-dd";
+		scope.pattern =  param.pattern || (scope.isShowTime?"yyyy-MM-dd HH:mm:ss":"yyyy-MM-dd");
 //		scope.defaultDate = parse_(param.defalutVal, scope.pattern) || undefined; 	// 日期格式的值
 		scope.maxyear = param.maxyear || 2035;
 		scope.minyear = param.minyear || 1970;
