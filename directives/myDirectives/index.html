@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/wzDatepicker.css"/>
+		<style type="text/css">
+			.input{
+				width: 200px;
+				height: 45px;
+			}
+		</style>
+	</head>
+	<body>
+			<div ng-controller="appCtrl">
+				<span ng-bind="param.date"></span>
+				<wz-date ng-model="param.date" param="dateConfig"></wz-date>
+			</div>
+		
+		<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+		<script type="text/javascript" src="js/ng/angular-1.5.8/angular.js"></script>
+		<script type="text/javascript" src="js/myDirectives/wzDate.js"></script>
+		<script type="text/javascript">
+			var app = angular.module("app", [
+				"wz.date"
+			]);
+
+			app.controller("appCtrl", ["$scope", 
+				function($scope){
+					$scope.param = {
+						date:"2017-09-11"
+					};
+					$scope.dateConfig = {
+						pattern:"yyyy-MM-dd",
+						maxyear:2019,
+						minyear:1990,
+						isShowTime : false,
+						inputCls: "input"
+					};
+				}
+			]);
+		</script>
+	</body>
+</html>
