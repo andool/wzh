@@ -158,7 +158,7 @@ dires.directive("wzPager", [
 		return {
 			restrict:"E",
 			replace:true,
-			templateUrl:"/gl/tpls/comm_tpls/wz_pager.html",
+			templateUrl:"/gl/tpls/comm_tpls/wz_pager_tpl.html",
 			scope:{
 				cfg:"=conf"
 			},
@@ -274,7 +274,7 @@ dires.directive("wzGrid", [
 		return {
 			restrict:"EA",
 			replace:true,
-			templateUrl:"/gl/tpls/comm_tpls/wz_grid.html",
+			templateUrl:"/gl/tpls/comm_tpls/wz_grid_tpl.html",
 			scope:{
 				cfg:"=conf"
 			},
