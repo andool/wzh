@@ -1,0 +1,27 @@
+<div class="wz_grid" style="height: {{cfg.height+15}}px;">
+	<div style="height: {{cfg.height}}px; overflow-y: auto;">
+		<table>
+			<thead>
+				<tr ng-class="{simple: cfg.type=='simple', border:cfg.type=='border', colorful:cfg.type=='colorful'}">
+					<td ng-if="cfg.showIndex" width="10">序号</td>
+					<td ng-repeat="col in cfg.cols" width="{{col.width}}" align="{{col.align||'center'}}">{{col.title}}</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="d in cfg.data" 
+					ng-class="{hover: cfg.hover, simple: cfg.type=='simple', border:cfg.type=='border', colorful:cfg.type=='colorful', odd:$index%2==0, even:$index%2!=0}">
+					<td ng-if="cfg.showIndex">{{(cfg.pager.current-1)*cfg.pager.size + $index + 1}}</td>
+					<td ng-repeat="td in cfg.cols" align="{{td.align||'center'}}" >{{d[td.val]}}</td>
+				</tr>
+			</tbody>
+			<tfoot ng-if="cfg.desc">
+				<tr>
+					<td colspan="{{cfg.cols.length + (cfg.showIndex?1:0)}}" align="right">{{cfg.desc}}</td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+	<div class="wz_grid_pager {{cfg.pager.type}}">
+		<wz-pager conf="cfg.pager"></wz-pager>
+	</div>
+</div>

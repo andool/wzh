@@ -1,0 +1,87 @@
+[
+ {
+	 "name":"菜单1",
+	 "desc":"this is 菜单一",
+	 "url":"",
+	 "level":1,
+	 "order":1,
+	 "icon":"/gl/img/home.png",
+	 "sub":[
+	        {
+	        	"name":"菜单1-1",
+		       	 "desc":"this is 菜单1-1",
+		       	 "url":"index.user",
+		       	 "level":2,
+		       	 "order":1
+	        },
+	        {
+	        	"name":"菜单1-2",
+		       	 "desc":"this is 菜单1-2",
+		       	 "url":"",
+		       	 "level":2,
+		       	 "order":2
+	        },
+	        {
+	        	"name":"菜单1-3",
+		       	 "desc":"this is 菜单1-3",
+		       	 "url":"",
+		       	 "level":2,
+		       	 "order":3
+	        }
+	        ]
+ },
+ {
+
+	 "name":"菜单2",
+	 "desc":"this is 菜单2",
+	 "url":"",
+	 "level":1,
+	 "order":2,
+	 "icon":"/gl/img/home.png",
+	 "sub":[
+	        {
+	        	"name":"菜单2-1",
+		       	 "desc":"this is 菜单2-1",
+		       	 "url":"",
+		       	 "level":2,
+		       	 "order":1
+	        },
+	        {
+	        	"name":"菜单2-2",
+		       	 "desc":"this is 菜单2-2",
+		       	 "url":"",
+		       	 "level":2,
+		       	 "order":2
+	        }
+	        ]
+ 
+ },
+ {
+
+	 "name":"菜单3",
+	 "desc":"this is 菜单3",
+	 "url":"",
+	 "level":1,
+	 "order":3,
+	 "icon":"/gl/img/home.png",
+	 "sub":[
+	        {
+	        	"name":"菜单3-1",
+		       	 "desc":"this is 菜单3-1",
+		       	 "url":"",
+		       	 "level":2,
+		       	 "order":1
+	        }
+	        ]
+ 
+ },
+ {
+
+	 "name":"菜单4",
+	 "desc":"this is 菜单4",
+	 "url":"",
+	 "level":1,
+	 "order":4,
+	 "icon":"/gl/img/home.png"
+ }
+]

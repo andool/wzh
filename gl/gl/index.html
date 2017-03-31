@@ -3,14 +3,47 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/module/wzDatepicker.css"/>
+		<link rel="stylesheet" type="text/css" href="js/lib/kindedor/themes/default/default.css"/>
+		<link rel="stylesheet" type="text/css" href="js/lib/kindedor/plugins/code/prettify.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font.css"/>
 	</head>
 	<body>
 		
-		<div ui-view></div>		
+		<div ui-view style="height: 100%;"></div>	
+		
 		
 		<script type="text/javascript" src="js/lib/jquery/jquery-1.12.4.min.js"></script>
 		<script type="text/javascript" src="js/lib/ng/angular-1.5.8/angular.js"></script>
 		<script type="text/javascript" src="js/lib/ng/angula_ui/angular-ui-router.min.js"></script>
+		<script type="text/javascript" src="js/lib/mylib/wzDate.js"></script>
 		
+		<script type="text/javascript" src="js/gl/app.js" ></script>
+		<script type="text/javascript" src="js/gl/index/controllers.js"></script>
+		<script type="text/javascript" src="js/gl/comme_module/directives.js"></script>
+		
+		<!-- kindeditor -->
+		<script src="js/lib/kindedor/kindeditor-all-min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/lib/kindedor/lang/zh-CN.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/lib/kindedor/angular-kindeditor.js" type="text/javascript" charset="utf-8"></script>
+		<!-- kindeditor -->
+		
+		<!-- syntaxhighlighter -->
+		<!--<script src="js/lib/syntaxhighlighter_3.0.83/src/shCore.js" type="text/javascript" charset="utf-8"></script>-->
+		<!--<script type="text/javascript">
+			$(document).ready(function(){
+//				 SyntaxHighlighter.autoloader(
+//			            ['js','jscript','javascript','scripts/shBrushJScript.js'],
+//			            ['bash','shell','scripts/shBrushBash.js'],
+//			            ['css','scripts/shBrushCss.js'],
+//			            ['xml','html','scripts/shBrushXml.js'],
+//			            ['sql','scripts/shBrushSql.js'],
+//			            ['php','scripts/shBrushPhp.js']
+//			        ); 
+//			    SyntaxHighlighter.all(); 
+			});
+		</script>-->
 	</body>
+	
 </html>

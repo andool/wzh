@@ -1,0 +1,265 @@
+html,body{height:100%}
+body,div,p,span,a,ul,ol,li,h1,h2,h3,h4,h5,h6,dl,dt,dd,table,tr,td,tbody,
+thead,tfoot,th,input,form,textarea,strong,i,em,b,img{margin: 0;padding: 0;}
+ul,ol{list-style: none;}
+table{ border-collapse: collapse; }
+body{
+	background: #f3f3f4;font-size: 14px;font-family: "幼圆","微软雅黑", times new roman;color: #333333;
+}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+::-webkit-scrollbar  
+{  
+    width: 4px;  
+    height: 4px;  
+    background-color: #2f4050;  
+}  
+/*定义滚动条轨道 内阴影+圆角*/  
+::-webkit-scrollbar-track  
+{  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
+    border-radius: 10px;  
+    background-color: #F5F5F5;  
+}
+/*定义滑块 内阴影+圆角*/  
+::-webkit-scrollbar-thumb  
+{  
+    border-radius: 10px;  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
+    background-color: #555;  
+}
+
+.filde{
+}
+.filde dl{
+	display: flex;
+	display: -webkit-flex;	
+	padding: 25px 0 25px 0;
+}
+.filde dt{
+	width: 100px;
+	text-align: right;
+	padding-right: 15px;
+}
+.main{
+	display: flex;
+	display: -webkit-flex;
+	height: 100%;
+}
+/*主信息窗口*/
+.content{
+	padding: 20px;
+	width: 84%;
+	overflow-y: auto;
+}
+/*菜单 menu*/
+.menu{
+	height: 100%;
+	width: 16%;
+}
+.menu_main{
+	width: 100%;
+	height: 100%;
+}
+.menu_main .info{
+	height: 25%;
+	background: #233645;
+	color: #dfdee7;
+}
+.menu_main .info div.user_pic{
+	padding: 10px;
+}
+.menu_main .info div.user_info{
+	padding: 10px;
+}
+.menu_main .menu_content{
+	height: 75%;
+	background: #2f4050;
+	color: #a7b1ac;
+	overflow-y: auto;
+}
+.per_menu .p_menu{
+	height: 45px;
+	line-height: 45px;
+	cursor: pointer;
+	padding-left: 25px;
+}
+.per_menu .p_menu:hover{
+	background: #293846;
+	color: #FFFFFF;
+}
+.per_menu .p_menu.memuChoosed{
+	border-left: 3px #008080 solid;
+	padding-left: 22px;
+	background: #293846;
+	color: #FFFFFF;
+}
+.per_menu ul{
+	background: #293846;
+}
+.per_menu ul li{
+	height: 35px;
+	line-height: 35px;
+	cursor: pointer;
+	padding-left: 40px;
+}
+.per_menu ul li:hover{
+	color: #FFFFFF;
+}
+.per_menu ul li.subChoose{
+	padding-left: 37px;
+	border-left: 3px #008080 solid;
+}
+/*panel 面板*/
+.panel{
+	clear: both;
+	background: #FFFFFF;
+	margin: 0 0 25px 0;
+	padding: 0;
+	border-radius: 15px;
+	border-top: 4px solid #e7eaec;
+	min-width: 250px;
+}
+.panel .panel_title{
+	min-height: 48px;
+	color: #676a6c;
+	line-height: 48px;
+	padding: 0 20px;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+}
+.panel_title h3{
+	display: inline-block;
+	float: left;
+}
+.panel_tools{
+	display: inline-block;
+	float: right;
+	position: relative;
+}
+.panel_tools i{
+	display: inline-block;
+	width: 12px;
+	height: 20px;
+	line-height: 20px;
+	color: #c4c4c4;
+	font-weight: 600;
+	cursor: pointer;
+	margin-left: 10px;
+}
+.panel_content{
+	border-color: #e7eaec;
+	border-style: solid;
+	border-width: 1px 0 0 0;
+	padding: 15px 20px;
+	line-height: 200%;
+	word-wrap:break-word;
+	position: relative;
+}
+.panel .panel_title .funcs_menu{
+	position: absolute;
+	border-color: #e7eaec;
+	border-style: solid;
+	border-width: 1px;
+	background: #FFFFFF;
+	width: 150px;
+	top:32px;
+	right: 0;
+	padding: 3px;
+	z-index: 999;
+}
+.panel .panel_title .funcs_menu li{
+	padding: 0 10px 0 10px;
+	cursor: pointer;
+}
+.panel .panel_title .funcs_menu li:hover{
+	background: #fbfbfb;
+}
+/*pager*/
+.pager{
+	line-height: 12px;
+	font-size: 12px;
+	text-align: center;
+	color: #676a6c;
+	width: 100%;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+}
+.pager ul li{
+	display: inline-block;
+	margin: 0 1px;
+}
+.pager ul li a{
+	display: block;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-decoration: none;
+	color: #676a6c;
+	text-align: center;
+}
+.pager ul li a:hover{
+	text-decoration: underline;
+}
+.pager ul li a.active{
+	text-decoration: underline;
+	color: #FFFFFF;
+	background: #676a6c;
+}
+/*grid table样式*/
+.wz_grid{
+	/*width: 100%;*/
+	/*position: relative;*/
+}
+.wz_grid table{
+	width: 100%;
+	border: none;
+	line-height: 35px;
+}
+.wz_grid table tr{
+	height: 35px;
+}
+.wz_grid table td{
+	padding: 0 10px;
+}
+.wz_grid tfoot tr td{
+	background: #b9c1fb;
+	color: #666666;
+}
+.wz_grid table tr.simple{
+	border-bottom: 1px solid #d4d4d6;
+}
+.wz_grid table tr.border td{
+	border: 1px solid #d4d4d6;
+}
+.wz_grid table tr.colorful{
+	border: 1px solid #d4d4d6;
+}
+.wz_grid table tbody tr.colorful.odd{
+	background: #b9c1fb;
+}
+.wz_grid table tr.colorful.even{
+}
+.wz_grid table tbody tr.hover:hover{
+	background: #a9b1ec;
+}
+.wz_grid .wz_grid_pager{
+	position: absolute;
+	bottom: 8px;
+	left: 50%;
+}
+.wz_grid .wz_grid_pager.all{
+	margin-left: -214px;
+}
+.wz_grid .wz_grid_pager.tiny{
+	margin-left: -53px;
+}
+.wz_grid .wz_grid_pager.small{
+	margin-left: -162px;
+}
+.wz_grid .wz_grid_pager.smaller{
+	margin-left: -88px;
+}
+
+ 

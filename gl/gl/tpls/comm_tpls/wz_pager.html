@@ -1,0 +1,29 @@
+<div class="pager">
+	<ul ng-show="cfg.count>0">
+		<li>
+			<a href="javascript:;" ng-click="toFirst();">&lt;&lt;</a>
+		</li>
+		<li>
+			<a href="javascript:;" ng-click="pre();">&lt;</a>
+		</li>
+		<li ng-repeat="p in pageList">
+			<a href="javascript:;" ng-class="{active: p == cfg.current}" ng-click="toPage(p);">{{p}}</a>
+		</li>
+		<li>
+			<a href="javascript:;" ng-click="next();">&gt;</a>
+		</li>
+		<li>
+			<a href="javascript:;" ng-click="toLast();">&gt;&gt;</a>
+		</li>
+		<li ng-hide="cfg.type == 'tiny'">
+			<div>
+				<input type="text" ng-model="pageShow" style="width: 22px;" ng-blur="changePage();" />/<span ng-bind="total"></span>页
+			</div>
+		</li>
+		<li ng-hide="cfg.type=='smaller' || cfg.type == 'tiny' || !cfg.sizeOptions || cfg.sizeOptions.length < 1">
+			每页<select ng-model="cfg.size" ng-options="opt for opt in cfg.sizeOptions" ng-change="sizeChange();"></select>
+				/
+				<span ng-bind="cfg.count"></span>条记录
+		</li>
+	</ul>
+</div>

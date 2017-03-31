@@ -1,0 +1,18 @@
+<div class="panel" ng-hide="panelVisitable">
+	<div class="panel_title" ng-hide="param.hideTitle">
+		<h3>{{paneltitle}}</h3>
+		<div class="panel_tools" ng-if="param.editable">
+			<i class="iconfont" ng-class="{icon_arrowdown:param.hideContent, icon_arrowup:!param.hideContent}" 
+				ng-click="toggle();"></i>
+			<i class="iconfont icon_wxbgongju" ng-if="param.funs" ng-click="funsToggle();"></i>
+			<i class="iconfont icon_close" ng-click="close();"></i>
+			<div class="funcs_menu" ng-if="param.funs" ng-show="funsShow">
+				<ul>
+					<li ng-repeat="(k, v) in param.funs" ng-click="callback(v);">{{k}}</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="panel_content" ng-transclude ng-hide="param.hideContent" style="height: {{height}};">
+	</div>
+</div>

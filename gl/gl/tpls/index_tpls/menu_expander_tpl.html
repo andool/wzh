@@ -1,0 +1,9 @@
+<div class="per_menu">
+	<div ng-click="toggle(param);" class="p_menu" ng-class="{memuChoosed:choosed}">
+		<strong>{{param.name}}</strong>
+	</div>
+	<ul ng-if="param.sub && param.sub.length > 0" ng-show="showChild">
+		<li ng-repeat="li in param.sub" ng-bind="li.name" 
+			ng-click="subClick(li);" ng-class="{subChoose:li.choosed}"></li>
+	</ul>
+</div>
