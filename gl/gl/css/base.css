@@ -245,11 +245,22 @@ body{
 	background: #a9b1ec;
 }
 .wz_grid .wz_grid_pager{
-	position: absolute;
-	bottom: 8px;
-	left: 50%;
+	/*position: absolute;*/
+	/*bottom: 8px;*/
+	/*left: 50%;*/
+	margin-top: 20px;
 }
-.wz_grid .wz_grid_pager.all{
+.wz_grid .opt{
+	display: inline-block;
+	text-decoration: none;
+	color: #333333;
+	font-size: 12px;
+	padding: 0 3px;
+}
+.wz_grid .gridicon{
+	
+}
+/*.wz_grid .wz_grid_pager.all{
 	margin-left: -214px;
 }
 .wz_grid .wz_grid_pager.tiny{
@@ -260,6 +271,6 @@ body{
 }
 .wz_grid .wz_grid_pager.smaller{
 	margin-left: -88px;
-}
+}*/
 
  

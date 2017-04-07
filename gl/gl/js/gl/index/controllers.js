@@ -25,7 +25,7 @@ ctrls.service("indexServer", ["$http",
 			menus: function(userid){
 				return getMenus(userid);
 			}
-		}
+		};
 	}
 ]);
 ctrls.controller("loginCtrl", ["$scope", "indexServer", "$state",
@@ -89,8 +89,6 @@ ctrls.controller("mainCtrl", ["$scope", "$sce", "indexServer",
 					}
 		};
 		
-		$scope.content = $sce.trustAsHtml('<p>this is a p</p>');
-		$scope.content2 = $sce.trustAsHtml('<p>this is a p 2</p>');
 		$scope.conf = {
 			count:1000
 //			type: "all",
@@ -98,20 +96,8 @@ ctrls.controller("mainCtrl", ["$scope", "$sce", "indexServer",
 		};
 		$scope.changeCount = function(){
 			$scope.conf.count = 2000;
-		}
+		};
 		
-		$scope.gridData = [
-			{name:"张三", age:19, gender:"男", birth:1234123413241234},
-			{name:"李四", age:23, gender:"女", birth:1234123413241234},
-			{name:"王五", age:18, gender:"男", birth:1234123413241234},
-			{name:"赵六", age:21, gender:"女", birth:1234123413241234},
-			{name:"张三", age:19, gender:"男", birth:1234123413241234},
-			{name:"李四", age:23, gender:"女", birth:1234123413241234},
-			{name:"王五", age:18, gender:"男", birth:1234123413241234},
-			{name:"赵六", age:21, gender:"女", birth:1234123413241234},
-			{name:"张三", age:19, gender:"男", birth:1234123413241234},
-			{name:"李四", age:23, gender:"女", birth:1234123413241234}
-		];
 		var createDate = function(newVal, oldVal){
 			if(newVal == oldVal) return;
 			$scope.gridConf.data = [];
@@ -125,30 +111,42 @@ ctrls.controller("mainCtrl", ["$scope", "$sce", "indexServer",
 				record.birth = 1231234123412341;
 				$scope.gridConf.data.push(record);
 			}
-		}
+		};
 		$scope.gridConf = {
 			cols : [
-				{ title:"姓名", val:"name", width:100},
+				{ title:"姓名", val:"name", width:100, toState:""},
 				{ title:"生日", val:"birth", width:100},
 				{ title:"年龄", val:"age", width:100},
-				{ title:"性别", val:"gender", width:100}
+				{ title:"性别", val:"gender", width:100},
+				{ title:"操作", width:100, funcs:[
+					{
+						name:"删除",
+						type:"nojump",
+						vals:["name"],
+						url:"",
+						icon:"icon_close"
+					},
+					{
+						name:"修改",
+						type:"jump",
+						vals:["name"],
+						state:"asdf.asdf",
+						icon:""
+					}
+				]}
 			],
-			data:$scope.gridData,
-			type:"border",// simple border colorful
-			hover: true,
+			type:"simple",// simple border colorful
+//			hover: true,
 			count:1000,
 //			desc:"asdfasdf",
-//			showIndex:true,
+			showIndex:true,
 			pager:{
 				type:"all",
 				count:2000
 			}
 		};
-		
 		$scope.$watch(function(){
 			return $scope.gridConf.pager.current + " " + $scope.gridConf.pager.size;
 		}, createDate);
-		
 	}
 ]);
-

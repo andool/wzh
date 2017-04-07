@@ -1,5 +1,5 @@
-<div class="wz_grid" style="height: {{cfg.height+15}}px;">
-	<div style="height: {{cfg.height}}px; overflow-y: auto;">
+<div class="wz_grid"> <!--style="height: {{cfg.height+15}}px;"-->
+	<div> <!--style="height: {{cfg.height}}px; overflow-y: auto;"-->
 		<table>
 			<thead>
 				<tr ng-class="{simple: cfg.type=='simple', border:cfg.type=='border', colorful:cfg.type=='colorful'}">
@@ -11,7 +11,20 @@
 				<tr ng-repeat="d in cfg.data" 
 					ng-class="{hover: cfg.hover, simple: cfg.type=='simple', border:cfg.type=='border', colorful:cfg.type=='colorful', odd:$index%2==0, even:$index%2!=0}">
 					<td ng-if="cfg.showIndex">{{(cfg.pager.current-1)*cfg.pager.size + $index + 1}}</td>
-					<td ng-repeat="td in cfg.cols" align="{{td.align||'center'}}" >{{d[td.val]}}</td>
+					<td ng-repeat="td in cfg.cols" align="{{td.align||'center'}}" >
+						<div ng-if="!td.funcs">
+							{{d[td.val]}}
+						</div>
+						<div ng-if="td.funcs">
+							<a href="javascript:;" ng-repeat="func in td.funcs"  class="opt"
+								ng-click="actions(func, d);" title="{{func.name}}" alt="{{func.name}}">
+								<!--<i class="iconfont {{func.icon}} gridicon"></i>-->
+								<span>
+									{{func.name}}
+								</span>
+							</a>
+						</div>
+					</td>
 				</tr>
 			</tbody>
 			<tfoot ng-if="cfg.desc">
@@ -21,7 +34,7 @@
 			</tfoot>
 		</table>
 	</div>
-	<div class="wz_grid_pager {{cfg.pager.type}}">
+	<div class="wz_grid_pager">
 		<wz-pager conf="cfg.pager"></wz-pager>
 	</div>
 </div>

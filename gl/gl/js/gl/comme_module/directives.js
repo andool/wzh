@@ -270,7 +270,6 @@ dires.directive("wzPager", [
  */
 dires.directive("wzGrid", [
 	function(){
-		
 		return {
 			restrict:"EA",
 			replace:true,
@@ -280,6 +279,11 @@ dires.directive("wzGrid", [
 			},
 			link:function(scope, ele, attrs){
 				scope.cfg.height = scope.cfg.height || 450;
+				
+				scope.actions = function(func, data){
+					console.info(func);
+					console.info(data);
+				};
 			}
 		};
 	}
